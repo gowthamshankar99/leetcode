@@ -3,13 +3,16 @@
  * @return {number[][]}
  */
 var merge = function(intervals) {
-
+    // sort the intervals by first array element
     intervals.sort(function(a,b) {
         return a[0] - b[0]
     });
+    
+    // Base case 
     if(intervals.length < 2) {
         return intervals;
     }
+    
     // first element 
     let previous = intervals[0];
     
