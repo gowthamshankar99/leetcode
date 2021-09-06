@@ -34,8 +34,7 @@ class Solution {
         
         int index = binarySearch(nums, target, start, end, 0);
         
-        boolean leftFlag = false;
-        boolean rightFlag = false;
+        boolean leftFlag,rightFlag = false;
         
         int i = index;
         int j = index;
