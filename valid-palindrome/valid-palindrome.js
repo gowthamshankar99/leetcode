@@ -7,19 +7,18 @@ var isPalindrome = function(s) {
     // remove special characters
 
     s = s.replace(/[^a-zA-Z0-9 ]/g, ""); 
-    s = s.replace(/\s/g, "").toLowerCase();
+    s = s.replace(/\s/g, "");
     
-    console.log(s);
+    
+    s = s.toLowerCase();
+    
     
     for(let i=0;i<s.length/2;i++) {
+        console.log(s[i] + " " + s[s.length-1-i]);
         if(s[i] != s[s.length-1-i]) {
             return false;
         }
     }
     
-    return true;
-    
-    
-    //return s.toLowerCase() == s.split("").reverse().join("").toLowerCase()
-    
+    return true;    
 };
