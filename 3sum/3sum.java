@@ -11,10 +11,11 @@ class Solution {
                  int sum = 0-nums[i];
                  while(low < high) {
                      if(sum == nums[low] + nums[high]) {
-                        // innerList.add(nums[i]);
-                        // innerList.add(nums[low]);
-                        // innerList.add(nums[high]);
-                         list.add(Arrays.asList(nums[i], nums[low], nums[high]));
+                         List<Integer> innerList = new ArrayList<Integer>();
+                         innerList.add(nums[i]);
+                         innerList.add(nums[low]);
+                         innerList.add(nums[high]);
+                         list.add(innerList);
                          while(low < high && nums[low] == nums[low+1]) low++;
                          while(low < high && nums[high] == nums[high-1]) high--;
                          low++;
