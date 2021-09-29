@@ -43,8 +43,6 @@ var insert = function(intervals, newInterval) {
         } else {
             if(i==1)
                 result.push(previous);
-            if(result[result.length-1] != previous)
-                result[result.length-1] = previous
             result.push(current);
         }
         // new previous 
