@@ -15,36 +15,17 @@ var insert = function(intervals, newInterval) {
     if(intervals.length == oldLength)
         intervals.push(newInterval);
     
-    if(intervals.length == 1)
-    {
-        intervals.push(newInterval);
-    }
-    
-    if(intervals.length == 0) {
+    if(intervals.length == 0)
         return [newInterval];
-    }
+    
+    if(intervals.length == 1)
+        intervals.push(newInterval);
+    
     // result array 
     let result = [];
 
-    
-    if(intervals.length == 2) {
-        if(intervals[0][1] >= intervals[1][0]) {
-            intervals = intervals.flat();
-            intervals.sort(function(a,b) {
-                return a-b;
-            });
-        
-            return [[intervals[0], intervals[intervals.length-1]]];
-        } else  {
-            return intervals;
-        }
 
-    }
-    
-    
-    
-    console.log("new intervals")
-    console.log(intervals);
+
 
     let previous = intervals[0];
     for(let i=1;i<intervals.length;i++) {
