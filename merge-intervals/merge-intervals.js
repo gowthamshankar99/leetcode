@@ -1,43 +1,47 @@
 /**
  * @param {number[][]} intervals
+ * @param {number[]} newInterval
  * @return {number[][]}
  */
-var merge = function(intervals) {
-    // sort the intervals by first array element
+var insert = function(intervals, newInterval) {
+    
+    intervals.push(newInterval);
+    
+    // sort
     intervals.sort(function(a,b) {
-        return a[0] - b[0]
-    });
+        return a[0]-b[0];
+    })
     
-    // Base case 
-    if(intervals.length < 2) {
-        return intervals;
-    }
+    if(intervals.length == 0)
+        return [newInterval];
     
-    // first element 
-    let previous = intervals[0];
+    if(intervals.length == 1)
+        intervals.push(newInterval);
     
     // result array 
     let result = [];
-      
-    // loop through the array 
+
+    let previous = intervals[0];
     for(let i=1;i<intervals.length;i++) {
         let current = intervals[i];
         if(previous[1] >= current[0]) {
-            // there is a overlap
-            let flattenedArray = [previous, current].flat().sort(function(a,b) {
+            // there is an overlap
+            let concatatedArray = previous.concat(current);
+            concatatedArray.sort(function(a,b) {
                 return a-b;
-            });
-            // pop the last element
-            result.pop();
-            result.push([flattenedArray[0],flattenedArray[3]]);
+            })
+            current = [concatatedArray[0], concatatedArray[concatatedArray.length-1]];
+            if(result.length>0)
+                result.pop();
+            result.push(current);
         } else {
-            if(i == 1)
-                // add the first Element 
+            if(i==1)
                 result.push(previous);
-            result.push(intervals[i]);
+            result.push(current);
         }
-        // replace previous value 
-        previous = result[result.length-1];
+        // new previous 
+        previous = current;
     }
+    
     return result;
 };
