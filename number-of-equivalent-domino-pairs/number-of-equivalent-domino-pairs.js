@@ -15,8 +15,7 @@ var numEquivDominoPairs = function(dominoes) {
                  result++;
       }
     }
-    
-    console.log(dominoes);
+
     return result;
     
 };
