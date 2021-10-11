@@ -1,8 +1,7 @@
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         
-        // result list 
-        List<Integer> result = new ArrayList<Integer>();
+
         // stack creation 
         Stack<Integer> stack = new Stack<Integer>();
         // Hashmap creation
@@ -28,9 +27,3 @@ class Solution {
         return nums1;
     }
 }
-
-/*
-
-
-
-*/
