@@ -20,6 +20,7 @@ class Solution {
             // push to res
             res.add(result);
         }
+
         
         int[] resArray = new int[res.size()];
         
@@ -27,7 +28,7 @@ class Solution {
         for(int i : res) {
             resArray[counter] = i;
             counter++;
-        }  
+        }   
         return resArray;
     }
 }
