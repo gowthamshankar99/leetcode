@@ -4,7 +4,7 @@
  case 1 : we have stock on day i
  
     a. I bought it today
-        dp[i-2][0] +prices[i][1]
+        dp[i-1][0]-prices[i][1]
   
     b. I am carry forwarding from previous buy
        dp[i-1][1]
@@ -13,7 +13,7 @@
  case 2 : we dont have stock on day i
  
     a. I sold it today
-       dp[i-1][1]-prices[i]
+       dp[i-1][1]+prices[i]
     
     b. I sold it on a earlier day
        dp[i-1][0]
