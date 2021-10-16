@@ -25,8 +25,6 @@ class Solution {
             }
             if(counter==difference+1) {
                 backNodeValue = current;
-                // found the backNode
-                
             }
             counter++;
             current = current.next;
