@@ -29,8 +29,6 @@ class Solution {
                  newEleList.add(strs[i]);
                  map.put(element, newEleList);
              }
-            
-
         }
     
         // loop through the hashmap 
