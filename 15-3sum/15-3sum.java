@@ -20,7 +20,6 @@ class Solution {
                     subList.add(nums[i]);
                     subList.add(nums[start]);
                     subList.add(nums[end]);
-                    //if(!result.contains(subList)) 
                     result.add(subList);
                     
                     while(start < end && nums[start] == nums[start+1]) 
