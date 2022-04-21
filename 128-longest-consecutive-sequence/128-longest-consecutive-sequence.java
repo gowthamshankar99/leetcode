@@ -19,13 +19,14 @@ class Solution {
             int nextElement = nums[i+1];
             if(currentELement + 1 == nextElement) {
                 result = result + 1;
+                maxResult = Math.max(maxResult, result);
                 
             } else {                
-                maxResult = Math.max(maxResult, result);
+                
                 result = 1;
             }
           }
         }
-     return Math.max(maxResult, result);   
+     return maxResult;   
     }
 }
