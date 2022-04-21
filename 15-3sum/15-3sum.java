@@ -16,13 +16,17 @@ class Solution {
                 } else if(nums[start] + nums[end] + nums[i] < 0) {
                     start++;
                 } else {
-                    //System.out.println(nums[i] + " " + nums[start] + " " + nums[end]);
                     subList = new ArrayList<Integer>();
                     subList.add(nums[i]);
                     subList.add(nums[start]);
                     subList.add(nums[end]);
                     if(!result.contains(subList)) 
                         result.add(subList);
+                    
+                    while(start < end && nums[start] == nums[start+1]) 
+                        start++;
+                    while(start < end && nums[end] == nums[end-1])
+                        end--;
                     start++;
                     end--;
                 }
