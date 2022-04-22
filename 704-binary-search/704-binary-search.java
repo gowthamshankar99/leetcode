@@ -34,7 +34,6 @@ class Solution {
                 return midPoint;
             }
         }
-        
         return -1;
     }
 }
