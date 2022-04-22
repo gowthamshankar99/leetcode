@@ -8,16 +8,6 @@ class Solution {
             maxValue = Math.max(maxValue, pile);
         }
         
-        
-        // create an array of that size
-//        int[] arr = new int[maxValue];
-//        int temp = 1;
-//        for(int i=0;i<arr.length;i++) {
-//            arr[i] = temp;
-//            temp++;
-//        }
-        
-        
         int start = 1;
         int end = maxValue;
         int res = 0;
