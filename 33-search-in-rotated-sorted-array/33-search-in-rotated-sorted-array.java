@@ -19,15 +19,13 @@ class Solution {
             
             
             if(nums[left] <= nums[mid]) {
-            if(nums[left] > target || target > nums[mid]) {
-                // target is on the left side
-                
-                left = mid + 1;
-                
-            } else {
-                // target is on the right side
-                right = mid - 1;
-            } 
+                if(nums[left] > target || target > nums[mid]) {
+                    // target is on the left side
+                    left = mid + 1;
+                } else {
+                    // target is on the right side
+                    right = mid - 1;
+                }    
             } 
             else {
                 // right portion
