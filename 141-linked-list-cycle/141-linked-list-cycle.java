@@ -12,6 +12,8 @@
 public class Solution {
     public boolean hasCycle(ListNode head) {
         
+        //System.out.println(head.val);
+        
         if(head == null)
             return false;
         
@@ -28,6 +30,5 @@ public class Solution {
         }
         
         return true;
-        
     }
 }
