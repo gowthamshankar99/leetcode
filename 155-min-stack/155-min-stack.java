@@ -10,11 +10,6 @@ class MinStack {
         if(minStack.isEmpty() || minStack.peek() >= val) {
             // update the minValue
             minStack.add(val); 
-        } else {
-        // keep the same minValue
-            //System.out.println(minStack.peek());
-            //minStack.add(minStack.peek());
-            
         }
        // push the value to the result stack 
         resultStack.add(val);
