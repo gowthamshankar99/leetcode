@@ -16,7 +16,6 @@ class Solution {
         ListNode resultList = head;
         ListNode node = null;
         while(list1 != null && list2 != null) {
-            //System.out.println(list1.val +"->" + list2.val);
             if(list1.val < list2.val) {
                 // create a node 
                 node = new ListNode(list1.val);
