@@ -1,11 +1,6 @@
 class Solution {
     public int evalRPN(String[] tokens) {
-        
-        List<String> list = new ArrayList<String>();
-        list.add("+");
-        list.add("-");
-        list.add("*");
-        list.add("/");
+    
         
         // initialize the stack 
         Stack<Integer> stack = new Stack<>();
@@ -13,7 +8,7 @@ class Solution {
         // loop through the characters 
         for(int i=0;i<tokens.length;i++) {
             // check if the digit is a special character ?
-            if(list.contains(tokens[i])) {
+            if(tokens[i].contentEquals("+") || tokens[i].contentEquals("-") || tokens[i].contentEquals("/") || tokens[i].contentEquals("*")) {
                 int firstElement = stack.pop();
                 int secondElement = stack.pop();
                 
