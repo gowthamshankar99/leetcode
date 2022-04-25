@@ -7,20 +7,16 @@ class MinStack {
     
     public void push(int val) {
         // check the current minValue - and update if neccessary
-        if(minStack.isEmpty() || minStack.peek() >= val) {
-            // update the minValue
+        if(minStack.isEmpty() || minStack.peek() >= val)
             minStack.add(val); 
-        }
        // push the value to the result stack 
         resultStack.add(val);
     }
     
     public void pop() {
         // check the current minValue and if the value being removed are the same - if so - remove the value from the stack too 
-        if(minStack.peek().equals(resultStack.peek())) {
+        if(minStack.peek().equals(resultStack.peek()))
             minStack.pop();
-            
-        } 
         resultStack.pop();        
     }
     
@@ -29,9 +25,6 @@ class MinStack {
     }
     
     public int getMin() {
-        // get sizes
-        //System.out.println(minStack.size());
-        //System.out.println(resultStack.size());
         return minStack.peek();
     }
 }
