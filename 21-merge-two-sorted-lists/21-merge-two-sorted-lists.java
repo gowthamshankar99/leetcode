@@ -20,14 +20,13 @@ class Solution {
                 // create a node 
                 node = new ListNode(list1.val);
                 list1 = list1.next;
-                resultList.next = node;
-                resultList = resultList.next;
+
             } else {
                 node = new ListNode(list2.val);
                 list2 = list2.next;
+            }
                 resultList.next = node;
                 resultList = resultList.next;
-            }
         }
         
         
