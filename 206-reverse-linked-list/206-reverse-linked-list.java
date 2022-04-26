@@ -11,6 +11,22 @@
 class Solution {
     public ListNode reverseList(ListNode head) {
         
+        ListNode prev = null;
+        ListNode curr = head;
+        
+        while(curr != null) {
+            ListNode next_node = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next_node;
+        }
+        
+        return prev;
+        
+    }
+    
+    public ListNode naiveSolutionUsingStack(ListNode head) {
+        
         // create a stack
         Stack<Integer> stack = new Stack<>();
         
