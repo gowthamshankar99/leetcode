@@ -19,11 +19,9 @@ class Solution {
         while(curr != null) {
             size++;
             curr = curr.next;
-        }
-        System.out.println(size);
-        
+        }        
         int frontSize = size - n;
-        
+    
         
         // reset curr
         curr = dummy;
@@ -34,7 +32,6 @@ class Solution {
         }
         
         curr.next = curr.next.next;
-    
         return dummy.next;
     }
 }
