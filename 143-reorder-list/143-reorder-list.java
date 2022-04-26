@@ -21,8 +21,6 @@ class Solution {
             fast = fast.next.next;
         }
         
-        
-        System.out.println(slow.val);
         int midValue = slow.val;
         
         ListNode prev = null;
