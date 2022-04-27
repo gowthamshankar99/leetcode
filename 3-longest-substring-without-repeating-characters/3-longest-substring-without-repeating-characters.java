@@ -15,8 +15,8 @@ class Solution {
                     testSet.remove(s.charAt(start));
                     if(s.charAt(start) == s.charAt(i)) {
                         maxSize = Math.max(maxSize, currentSetSize);
-                        start++;
                         testSet.add(s.charAt(i));
+                        start++;
                         break;
                     }
                     start++;
