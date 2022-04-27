@@ -5,7 +5,6 @@ class Solution {
         int maxSize = 0;
         
         int start = 0;
-        int mover = 0;
         
         //loop through the string ....
         for(int i=0;i<s.length();i++) {
