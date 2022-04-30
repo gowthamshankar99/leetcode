@@ -18,14 +18,11 @@ class Solution {
     List<Integer> resultList = new ArrayList<Integer>();
     public List<Integer> preorderTraversal(TreeNode root) {
         
-        if(root == null) {
+        if(root == null)
             return resultList;   
-        }
         
-        if(root != null) {
-            //System.out.println(root.val);
+        if(root != null)
             resultList.add(root.val);
-        }
         
         preorderTraversal(root.left);
         preorderTraversal(root.right);
