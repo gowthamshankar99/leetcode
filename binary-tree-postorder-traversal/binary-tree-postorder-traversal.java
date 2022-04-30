@@ -22,8 +22,7 @@ class Solution {
         
         postorderTraversal(root.left);
         postorderTraversal(root.right);
-        if(root!=null)
-            resultList.add(root.val);
+        resultList.add(root.val);
         
         return resultList;
         
