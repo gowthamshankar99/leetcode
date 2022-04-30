@@ -14,9 +14,8 @@
  * }
  */
 class Solution {
-    public int answer;
+    public int answer = 0;
     public int maxDepth(TreeNode root) {
-         answer = 0;
          max2(root, 1);
          return answer;
     }
