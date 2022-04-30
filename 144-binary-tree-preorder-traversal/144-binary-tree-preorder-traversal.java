@@ -18,7 +18,7 @@ class Solution {
     List<Integer> resultList = new ArrayList<Integer>();
     
     
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal2(TreeNode root) {
         
         if(root == null)
             return resultList;   
@@ -34,27 +34,27 @@ class Solution {
     
     
     
-    public List<Integer> iterativeSolution(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         
-        List<Integer> output = new LinkedList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        LinkedList<Integer> output = new LinkedList<Integer>();
+        LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
         
-        if(root == null )
+        if(root == null)
             return output;
         
         // add the root element
         stack.add(root);
         
         while(!stack.isEmpty()) {
-            TreeNode node = stack.peek();
+            TreeNode node = stack.pollLast();
             output.add(node.val);
             
-            if(root.right != null) {
-                stack.add(root.right);
+            if(node.right != null) {
+                stack.add(node.right);
             } 
             
-            if(root.left != null) {
-                stack.add(root.left);
+            if(node.left != null) {
+                stack.add(node.left);
             }
         }
         
