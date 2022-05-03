@@ -2,7 +2,13 @@ class Solution {
     public int findUnsortedSubarray(int[] nums) {
         int[] snums = nums.clone();
         Arrays.sort(snums);
+        
+        if(Arrays.equals(nums, snums)) {
+            return 0;
+        }
+        
         int index = 0;
+        
         for(int i=0;i<nums.length;i++) {
             if(nums[i] != snums[i]) {
                  index = i;
@@ -18,10 +24,6 @@ class Solution {
                 break;
             }
         }
-        
-        if(index == 0 && endIndex == 0)
-            return 0;
-        
         return (endIndex-index)+1;
     }
 }
