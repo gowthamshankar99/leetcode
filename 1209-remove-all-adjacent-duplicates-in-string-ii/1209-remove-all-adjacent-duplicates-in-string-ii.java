@@ -1,20 +1,36 @@
 class Solution {
-public String removeDuplicates(String s, int k) {
-    StringBuilder sb = new StringBuilder(s);
-    Stack<Integer> counts = new Stack<>();
-    for (int i = 0; i < sb.length(); ++i) {
-        if (i == 0 || sb.charAt(i) != sb.charAt(i - 1)) {
-            counts.push(1);
-        } else {
-            int incremented = counts.pop() + 1;
-            if (incremented == k) {
-                sb.delete(i - k + 1, i + 1);
-                i = i - k;
-            } else {
-                counts.push(incremented);
-            }
+    public String removeDuplicates(String s, int k) {
+        
+        // create a stack to hold the results
+        Stack<Integer> stack = new Stack<Integer>();
+        
+        // create a string builder
+        StringBuilder sb = new StringBuilder(s);
+        
+        // first Element 
+        char prev = sb.charAt(0);
+        stack.add(1);
+        
+        // 
+        
+        // loop through the string 
+        for(int i=1;i<sb.length();i++) {
+              if(i < 1) {
+                  i = 1;
+              }
+            
+              if(stack.isEmpty()) stack.add(1);
+              if(sb.charAt(i-1) == sb.charAt(i)) {
+                    stack.add(stack.pop() + 1); 
+                    if(stack.peek() == k) {
+                        sb.delete(i - k + 1, i + 1);
+                        stack.pop();
+                        i = i - k;
+                    }
+              } else {
+                  stack.add(1);
+              }
         }
+        return sb.toString();
     }
-    return sb.toString();
-}
 }
