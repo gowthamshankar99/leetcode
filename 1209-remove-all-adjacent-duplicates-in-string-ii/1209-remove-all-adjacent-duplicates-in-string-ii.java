@@ -7,9 +7,6 @@ class Solution {
         // create a string builder
         StringBuilder sb = new StringBuilder(s);
         
-        // first Element 
-        char prev = sb.charAt(0);
-        
         // loop through the string 
         for(int i=1;i<sb.length();i++) {
               if(i < 1) {
