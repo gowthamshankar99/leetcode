@@ -9,9 +9,6 @@ class Solution {
         
         // first Element 
         char prev = sb.charAt(0);
-        stack.add(1);
-        
-        // 
         
         // loop through the string 
         for(int i=1;i<sb.length();i++) {
