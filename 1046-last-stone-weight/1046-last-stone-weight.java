@@ -9,7 +9,7 @@ class Solution {
         if(stones.length == 1)
             return stones[0];
         
-        Arrays.sort(stones);
+//        Arrays.sort(stones);
         
         Queue<Integer> queue = new PriorityQueue<Integer>((a,b) -> b-a);
         
