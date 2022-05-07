@@ -13,18 +13,24 @@ class Solution {
         
         Queue<Integer> queue = new PriorityQueue<Integer>((a,b) -> b-a);
         
-        int pointer1 = stones.length-1;
-        int pointer2 = stones.length-2;
+ //       int pointer1 = stones.length-1;
+ //       int pointer2 = stones.length-2;
         
-        while(pointer2 >= 0) {
-            if(stones[pointer1] != stones[pointer2])
-                queue.add(stones[pointer1] - stones[pointer2]);
+ //       while(pointer2 >= 0) {
+ //           if(stones[pointer1] != stones[pointer2])
+ //               queue.add(stones[pointer1] - stones[pointer2]);
             
-            pointer1 = pointer1 - 2;
-            pointer2 = pointer2 - 2;
-        }
+ //           pointer1 = pointer1 - 2;
+ //           pointer2 = pointer2 - 2;
+ //       }
         
-        if(pointer1 == 0) queue.add(stones[pointer1]);
+        
+//        if(pointer1 == 0) queue.add(stones[pointer1]);
+        
+        
+        for(int i=0;i<stones.length;i++) {
+            queue.add(stones[i]);
+        }
         
         while(queue.size() > 1) {
             int ele1 = queue.remove();
