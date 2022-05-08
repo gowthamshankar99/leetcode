@@ -17,7 +17,6 @@ class Solution {
         int counter = 0;
         
         for(int[] it :  queue) {
-            //System.out.println(queue.poll());    
             result[counter++] = points[it[0]];
         }
         
