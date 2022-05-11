@@ -21,8 +21,7 @@ class Solution {
         };
         
         
-        backtrack(result, digits, mappings, "", 0);
-        
+        backtrack(result, digits, mappings, "", 0);        
         return result;
         
     }
@@ -36,9 +35,7 @@ class Solution {
         }
         
         String letters = mappings[digits.charAt(index)-'0'];
-        
         for(int i=0;i<letters.length();i++) {
-            //System.out.println(currentString + letters.charAt(i));
             backtrack(result, digits, mappings, currentString + letters.charAt(i), index+1);
         }
         
