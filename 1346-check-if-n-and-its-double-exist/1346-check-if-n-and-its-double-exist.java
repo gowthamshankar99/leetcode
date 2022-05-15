@@ -3,7 +3,7 @@ class Solution {
         List<Double> set = new ArrayList<Double>();
         
         for(int element: arr) {
-            if(set.contains((double)(2*element)) || set.contains(((double)element/2))) {
+            if(set.contains((2*(double)(element))) || set.contains(((double)element/2))) {
                 return true;
             }
             set.add((double)element);
