@@ -15,15 +15,13 @@
  */
 class Solution {
     public int deepestLeavesSum(TreeNode root) {
-        
-        // LOT
+
         if(root == null)
             return 0;
         
         Queue<TreeNode> queue = new LinkedList<TreeNode>();        
         queue.add(root);
         
-        int level = 1;
         int sum = 0;
         
         while(!queue.isEmpty()) {
