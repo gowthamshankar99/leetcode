@@ -21,9 +21,7 @@ class Solution {
         
         Queue<TreeNode> queue = new LinkedList<TreeNode>();        
         queue.add(root);
-        
         int sum = 0;
-        
         while(!queue.isEmpty()) {
             int size = queue.size();
             sum = 0;
