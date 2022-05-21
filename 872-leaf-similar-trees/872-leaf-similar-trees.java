@@ -21,8 +21,6 @@ class Solution {
         if(root1 == null && root2 == null) 
             return true;
         
-        //collectTreeNodes(root1);
-        
         iterate(root1, root1List);
         iterate(root2, root2List);
         
@@ -34,39 +32,11 @@ class Solution {
         if(root == null)
             return;
         if(root.left == null && root.right == null) {
-            System.out.println(root.val);
             list.add(root.val);
             return;
         }
         
         iterate(root.left, list);
         iterate(root.right, list);
-    }
-    
-    
-    public List<Integer> collectTreeNodes(TreeNode root) {
-        List<Integer> result = null;
-        // create queue 
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.add(root);
-        
-        while(!queue.isEmpty()) {
-            int size = queue.size();
-            result = new ArrayList<>();
-            for(int i=0;i<size;i++) {
-                
-                TreeNode node = queue.remove();
-                result.add(node.val);
-                if(node.left != null) {
-                    queue.add(node.left);
-                }
-                
-                if(node.right != null) {
-                    queue.add(node.right);
-                }
-                
-            }
-        }
-        return result;
     }
 }
