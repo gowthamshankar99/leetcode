@@ -3,9 +3,6 @@ class Solution {
         
         String[] arr = s.split(" ");
         
-        if(s.trim().contentEquals("")) 
-            return 0;
-        
         int result = 0;
         
         for(int i=0;i<arr.length;i++) {
