@@ -13,11 +13,11 @@ class Solution {
         
         // build using heap sort 
         //Queue<ListNode> queue = new PriorityQueue<ListNode>((a,b) -> a.val - b.val);
-        Queue<ListNode> queue = new PriorityQueue<ListNode>((a,b) -> a.val - b.val);
+        Queue<Integer> queue = new PriorityQueue<>((a,b) -> a - b);
         
         ListNode curr = head;
         while(curr != null) {
-            queue.add(curr);
+            queue.add(curr.val);
             curr = curr.next;
         }
         
@@ -26,8 +26,7 @@ class Solution {
         
         while(!queue.isEmpty()) {
             // create a new node = not neccessary ?
-            ListNode n = queue.remove();
-            newDummy.next = new ListNode(n.val);
+            newDummy.next = new ListNode(queue.remove());
             newDummy = newDummy.next;
         }
         
