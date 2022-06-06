@@ -9,10 +9,7 @@ class Solution {
         
         // hashmap to store the 
         HashMap<Character, Integer> map = new HashMap<>();
-        
-        
-        
-        // logic --
+
         // loop through the string array 
         for(int i=0;i<s.length();i++) {
             end++;
