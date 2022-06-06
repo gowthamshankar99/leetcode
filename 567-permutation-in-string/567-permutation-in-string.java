@@ -7,7 +7,6 @@ class Solution {
         }
         int len = s1.length();
         int start = 0;
-        int end = 0;
         int[] arrCopy = Arrays.copyOf(arr, arr.length);
         while((start + len) <= s2.length()) {
             String currSubString = s2.substring(start, start+len);
